@@ -1,0 +1,21 @@
+<div id="files">
+
+</div>
+
+<script>
+  console.log(`${{{ data }}}`);
+  let fileNames = `{{ data }}`.split(',');
+  console.log(fileNames);
+  let strs = [ "String 1", "String 2", "String 3" ];
+  let div = document.getElementById("files");
+  let list = document.createElement("ul");
+  for (let i of fileNames) {
+    let anchor = document.createElement("a");
+    anchor.href = `/source_code/${i}`;
+    anchor.innerText = i;
+    let elem = document.createElement("li");
+    elem.appendChild(anchor);
+    list.appendChild(elem);
+    div.appendChild(list);
+  }
+</script>

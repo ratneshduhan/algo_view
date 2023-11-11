@@ -1,0 +1,12 @@
+<div id="wrapper" style="height: 95vh;">
+    <textarea type="text" id="editor">{{data}}</textarea>
+</div>
+<script>
+    const textarea = document.getElementById("editor");
+    let editor = new CodeMirror.fromTextArea(textarea, {
+        lineNumbers: true,
+        mode: "javascript",
+        theme: "base16-dark",
+    });
+    // editor.getDoc().setValue('let a=52;');
+</script>
